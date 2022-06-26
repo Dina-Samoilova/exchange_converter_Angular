@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>{{ title }}</h1>
+  <app-header 
+    usd={{usd}}
+    eur={{eur}}
+    rateUSD={{usdUah.rates.UAH}}
+    rateEUR={{eurUah.rates.UAH}}
+    ></app-header>
+  <app-converter rateUSD={{usdUah.rates.UAH}}></app-converter>
+  <app-footer rate={{usdUah.timestamp}}></app-footer>
+</div>
+
