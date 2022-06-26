@@ -1,0 +1,67 @@
+<form>
+  <div class="form-control">
+    <input
+      type="number"
+      min="0"
+      max="1000000000"
+      name="sum1"
+      [value] = "sum1"
+      (change)="changeAmount1($event)"
+    />
+
+    <select class="form-control" id="currency1"
+      (change)="changeCurrency1($event)"
+    >
+      <option *ngFor="let currency of currencys" [ngValue] = "currency">
+      {{currency}}
+      </option>
+    </select>
+
+    <label for="currency1">
+      <fa-icon *ngIf="isUAH1" [icon]="faHryvnia"></fa-icon>
+      <fa-icon *ngIf="isUSD1" [icon]="faDollar"></fa-icon>
+      <fa-icon *ngIf="isEUR1" [icon]="faEuro"></fa-icon>
+    </label>
+
+    <div *ngIf="!valid1" class="error">
+      Only positive number available
+    </div>
+  </div>
+</form>
+
+<form>
+  <div class="form-control">
+    <input
+      type="number"
+      min="0"
+      max="1000000000"
+      name="sum2"
+      [value]="sum2"
+      (change)="changeAmount2($event)"
+    />
+
+    <select
+      class="form-control"
+      id="currency2" 
+      (change)="changeCurrency2($event)"
+    >
+      <option
+        *ngFor="let currency of currencys.reverse()"
+        [ngValue]="currency"
+      >
+        {{currency}}
+      </option>
+    </select>
+
+    <label for="currency2">
+      <fa-icon *ngIf="isUAH2" [icon]="faHryvnia"></fa-icon>
+      <fa-icon *ngIf="isUSD2" [icon]="faDollar"></fa-icon>
+      <fa-icon *ngIf="isEUR2" [icon]="faEuro"></fa-icon>
+    </label>
+
+    <div *ngIf="!valid2" class="error">
+      Only positive number available
+    </div>
+  </div>
+</form>
+
