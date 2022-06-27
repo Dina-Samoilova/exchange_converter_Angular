@@ -1,5 +1,5 @@
 export interface Rate {
-  timestamp: number;
+  date: string;
   base: string;
   rates: {
     'UAH': string,
