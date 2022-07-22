@@ -1,5 +1,5 @@
 {
-  "name": "test-itop100-exchange",
+  "name": "exchange_converter_Angular",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
